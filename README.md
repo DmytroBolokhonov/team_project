@@ -71,7 +71,8 @@ A pairplot was used to visualize relationships among the variables. Key observat
 - **Recommendations**:
   - Use polynomial regression or log transformations to better capture non-linear growth patterns.
 - **Visualization**:  
-  ![TIME vs. TOTAL_SPEND](./results/time_vs_total_spend.png)
+### TIME vs TOTAL_SPEND
+![Scatter Plot: TIME vs TOTAL_SPEND](./TIME%20vs.%20TOTAL_SPEND.png)
 
 ---
 
@@ -83,8 +84,10 @@ A pairplot was used to visualize relationships among the variables. Key observat
 - **Recommendations**:
   - Group countries by income or healthcare system type to explore stronger relationships.
   - Perform feature engineering to introduce new explanatory variables.
-- **Visualization**:  
-  ![PC_HEALTHXP vs. USD_CAP](./results/pc_healthxp_vs_usd_cap.png)
+- **Visualization**:
+- 
+### PC_HEALTHXP vs. USD_CAP
+![Scatter Plot: PC_HEALTHXP vs. USD_CAP](./PC_HEALTHXP%20vs.%20USD_CAP.png)
 
 ---
 
@@ -96,7 +99,8 @@ A pairplot was used to visualize relationships among the variables. Key observat
   - Investigate outliers to identify specific countries driving this trend.
   - Consider normalizing `TOTAL_SPEND` by population to improve comparability.
 - **Visualization**:  
-  ![PC_GDP vs. TOTAL_SPEND](./results/pc_gdp_vs_total_spend.png)
+### PC_GDP vs. TOTAL_SPEND
+![Scatter Plot: PC_GDP vs. TOTAL_SPEND](./PC_GDP%20vs.%20TOTAL_SPEND.png)
 
 ---
 
@@ -107,8 +111,8 @@ A pairplot was used to visualize relationships among the variables. Key observat
 - **Outliers**:
   - Significant outliers in `TOTAL_SPEND` and `USD_CAP` influence trends.
   - Removing outliers helps reveal clearer relationships.
-- **Visualization**:  
-  ![Pairplot](./results/pairplot.png)
+### Pairplot Summary
+![Pairplot Summary](./Pairplot%20Summary.png)
 
 
 # Additional Project Questions and Answers
