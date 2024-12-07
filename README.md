@@ -89,7 +89,7 @@ A pairplot was used to visualize relationships among the variables. Key observat
 - **Visualization**:
 - 
 ### PC_HEALTHXP vs USD_CAP
-![Scatter Plot: PC_HEALTHXP vs USD_CAP](PC_HEALTHXP%20vs.%20USD_CAP.png)
+![Scatter Plot: PC_HEALTHXP vs USD_CAP](./reports/PC_HEALTHXP%20vs.%20USD_CAP.png)
 
 ---
 
@@ -102,7 +102,7 @@ A pairplot was used to visualize relationships among the variables. Key observat
   - Consider normalizing `TOTAL_SPEND` by population to improve comparability.
 - **Visualization**:  
 ### PC_GDP vs TOTAL_SPEND
-![Scatter Plot: PC_GDP vs TOTAL_SPEND](PC_GDP%20vs.%20TOTAL_SPEND.png)
+![Scatter Plot: PC_GDP vs TOTAL SPEND](./reports/PC_GDP%20vs.%20TOTAL_SPEND.png)
 
 
 ---
@@ -115,7 +115,8 @@ A pairplot was used to visualize relationships among the variables. Key observat
   - Significant outliers in `TOTAL_SPEND` and `USD_CAP` influence trends.
   - Removing outliers helps reveal clearer relationships.
 ### Pairplot Summary
-![Pairplot Summary](Pairplot%20Summary.png)
+![Pairplot Summary](./reports/Pairplot%20Summary.png)
+
 
 # Additional Project Questions and Answers
 
