@@ -72,7 +72,9 @@ A pairplot was used to visualize relationships among the variables. Key observat
   - Use polynomial regression or log transformations to better capture non-linear growth patterns.
 - **Visualization**:  
 ### TIME vs TOTAL_SPEND
-![Scatter Plot: TIME vs TOTAL_SPEND](TIME%20vs.%20TOTAL_SPEND.png)
+### TIME vs TOTAL_SPEND
+![Scatter Plot: TIME vs TOTAL SPEND](./TIME%20vs.%20TOTAL_SPEND.png)
+
 
 ---
 
