@@ -174,7 +174,9 @@ The final model was saved and is available for future use.
 
   The **SHAP waterfall plot** for individual observations revealed how each feature contributed to the predicted pharmaceutical spending for different countries, offering insights into country-specific behaviors.
 
-- **[SHAP Summary Plot - Top Drivers of Pharmaceutical Spending](https://github.dev/DmytroBolokhonov/team_project/blob/team_project/reports/Top%20Drivers%20of%20Pharmaceutical%20Spending-%20Country%20and%20Spending-Related%20Features.png)**
+
+### Top Drivers of Pharmaceutical Spending
+[Advanced Model Results](reports/Top%20Drivers%20of%20Pharmaceutical%20Spending-%20Country%20and%20Spending-Related%20Features.png)
 
 ---
 
