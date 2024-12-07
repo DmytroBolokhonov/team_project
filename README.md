@@ -6,13 +6,12 @@ Ronak Patel
 
 Dmytro Bolokhonov
 
-## Project overview video:
+### Project overview video:
 
-#### Ronak Patel Video
-[![Watch Ronak Patel's Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://drive.google.com/drive/folders/15v_m8gkb1I9S4zbHdgMoqfI0D_cgw-Pf?usp=drive_link)
+[Ronak Patel's Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://drive.google.com/drive/folders/15v_m8gkb1I9S4zbHdgMoqfI0D_cgw-Pf?usp=drive_link)
 
-#### Dmytro Bolokhonov Video
-[![Watch Dmytro Bolokhonov's Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://drive.google.com/file/d/1Lc3Arbkje29LynTA7CaQM-yM2q_abMfW/view?usp=sharing)
+
+[Dmytro Bolokhonov's Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://drive.google.com/file/d/1Lc3Arbkje29LynTA7CaQM-yM2q_abMfW/view?usp=sharing)
 
 ## Project Overview
 
