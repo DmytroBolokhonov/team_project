@@ -1,170 +1,268 @@
 # Team Project
 
-## Description
+# Project overview video:
 
-In your assigned team of 4-5, you will collaboratively create a program to analyze data from an open-sourced dataset. 
+Ronak Patel Video https://drive.google.com/drive/folders/15v_m8gkb1I9S4zbHdgMoqfI0D_cgw-Pf?usp=drive_link
 
-For example, your team might wish to examine the relationship between the length of a movie and the ratings users give the movie on a popular website. Or you may wish to explore the relationship between the size of a dog breed and the associated genetic ailments of that breed. Teams are encouraged to pick a business case that interests you, is robust enough that you have flexibility to practice your skills, and that is well-suited for showcasing business impact.
 
-The task in front of your team is deliberately open-ended. Your team will have to make decisions together:
-* How will you make sure all team members can contribute to the project?
-* How will you make decisions?
-* What is the question you're trying to answer through your data analysis?
-* What tasks need to be completed to get to your final output?
+# Pharmaceutical Spending Analysis
 
-At the end of the project, all team members are encouraged to fork the repo onto their profile so that prospective employers can view the project.
+## Project Overview
 
-This project should incorporate skills taught and used in the following modules:
+This project analyzes pharmaceutical spending data obtained from the Organisation for Economic Co-operation and Development (OECD). The main objective is to explore global spending trends, investigate relationships among spending variables, and prepare the dataset for advanced analytics and modeling.
 
-* Introduction to Building Software (Git, Shell & Python)
-* SQL
-* Applying Statistical Concepts (Linear Regression, Classification, and Resampling)
-* Scaling to Production
+## Data Sources
 
-AND
+The data is derived from the following sources:
 
-> * Visualization (Data Science Certificate)
-> * Sampling (Data Science Certificate)
+- **Pharmaceutical Spending Data**: OECD  
+- **Population Data**: DataHub  
 
-OR
+### Data Fields
 
-> * Algorithm & Data Structures (Machine Learning Software Foundations Certificate)
-> * Deep Learning (Machine Learning Software Foundations Certificate)
-
----
-
-## Learning Outcomes
-
-### Part 1 Learning Outcomes
-By the end of **Part 1**, participants will be able to:
-* Work through common problems or challenges a team encounters when collaborating using Git and GitHub, including merge conflicts.
-* Understand your business case and dataset.
-* Perform investigative analysis on your dataset with contributions from multiple team members.
-
-### Part 2 Learning Outcomes
-By the end of **Part 2**, participants will be able to:
-* Create a data visualization or a machine learning model as a team.
-* Clearly document and present the results of their analysis.
-* Reflect on their learning and collaboration process through a recorded video.
+| **Field**       | **Description**                             |
+|------------------|---------------------------------------------|
+| `LOCATION`      | Country code                                |
+| `TIME`          | Year of the data                           |
+| `PC_HEALTHXP`   | Percent of health spending                 |
+| `PC_GDP`        | Percent of GDP                             |
+| `USD_CAP`       | US dollars per capita                      |
+| `FLAG_CODES`    | Additional metadata flags                  |
+| `TOTAL_SPEND`   | Total pharmaceutical spending              |
 
 ---
 
-## Instructions
+## Preprocessing Steps
 
-1. You will be given access to a dataset bank. As a team, choose one of our carefully selected datasets (more info on this later) and explore it, keeping the questions listed below in mind.
+### Data Loading
+- The raw dataset is loaded and saved for reference.
 
-2. A team member should create a new repository for the project, which the rest of the team can clone (see the [Project Folder Structure](#project-folder-structure) for a folder structure template to use as a starting point). It doesn’t matter who creates the repository, as GitHub tracks everyone’s contributions fairly.
+### Data Cleaning
+- Missing values in the `FLAG_CODES` column are replaced with "Unknown".
+- Data types are standardized for consistency.
 
-3. Determine what roles the various team members will play on the team, which tasks need to be completed and assigned to which team members, and what your team standards will be with respect to code reviews, approvals, and merges. 
+### Data Transformation
+- Growth rates for `TOTAL_SPEND` and `USD_CAP` are calculated for time-series analysis.
+- Outliers in `TOTAL_SPEND` are identified and removed based on Z-scores.
 
-4. Have fun! This project is yours. This is the time to create something that prospective employers can consider when reviewing your application for a role, so be sure to clearly demonstrate the business value that your project could provide. What will your project tell them about you, your skills, and your ability to work effectively on a team?
-
-Additionally, there are resources listed at the bottom of this page to help you understand Git conflicts and ways to work effectively as a team. You should review these to help set standards for your team processes.
-
----
-
-## Potential Questions to Discuss When Reviewing Your Dataset
-
-* What are the key variables and attributes in your dataset?
-* How can we explore the relationships between different variables?
-* Are there any patterns or trends in the data that we can identify?
-* Who is the intended audience for our data analysis?
-* What is the question our analysis is trying to answer?
-* Are there any specific libraries or frameworks that are well-suited to our project requirements?
-* How can we iterate on our design to address feedback and make iterative improvements?
-* What best practices can we follow to promote inclusivity and diversity in our visualization design?
-* How can we ensure that our visualization accurately represents the underlying data without misleading or misinterpreting information?
-* Are there any privacy concerns or sensitive information that need to be addressed in our visualization?
-* What are the specific objectives and success criteria for our machine learning model?
-* How can we select the most relevant features for training our machine learning model?
-* Are there any missing values or outliers that need to be addressed through preprocessing?
-* Which machine learning algorithms are suitable for our problem domain?
-* What techniques can we use to validate and tune the hyperparameters for our models?
-* How should we split the dataset into training, validation, and test sets?
-* Are there any ethical implications or biases associated with our machine learning model?
-* How can we document our machine learning pipeline and model architecture for future reference?
-
-## Requirements
-
-* Thoroughly understand your data and the business case for your analysis. What will the impact of your results be?
-* Clean your data. Be confident in the decisions you have made while doing so (e.g. default handling of NULL values).
-* Test out regression analyses (for Part 1) or machine learning models/data visualizations (for Part 2). It may take several tries before you are satisfied with your results and understand how you can provide the most insight.
-* Make sure your code is well-commented and decisions are documented.
-* Keep your README up to date. Not only is that easier than writing it all at the end of your project, it will help keep you on track and ensure your alignment with your business objective.
-* Each team member must create, review, and merge a pull request.
-* Record a 3-5 minute video (at the end of Part 2) reflecting on your experience. Answer the following questions:
-  * What did you learn?
-  * What challenges did you face?
-  * How did you overcome those challenges?
-  * If you had more time, what would you add?
-  * What strengths do you bring to a team environment?
-
-> 🚨 Note: There are no hard requirements for the end of the Team Project 1 module, and nothing will be assessed at this stage. However, keep in mind that the work you do in Team Project 1 should set you up for success in Team Project 2, where the final requirements will be assessed. Use the time in Team Project 1 wisely to plan and prepare for the milestones you’ll need to achieve in Team Project 2.
-
----
-## Project Folder Structure
-
-Each team is responsible for creating their own Git repository for the Team Project. The following is a good starting point for the folder structure, however the structure is ultimately up to each team. You should structure your project in a way that makes sense for your business case, ensure it is clean, and **remove any unused folders**.
-
-```markdown
-|-- data
-|---- processed
-|---- raw
-|---- sql
-|-- experiments
-|-- models
-|-- reports
-|-- src
-|-- README.md
-|-- .gitignore
-```
-
-* **Data:** Contains the raw, processed and final data. For any data living in a database, make sure to export the tables out into the `sql` folder, so it can be used by anyone else.
-* **Experiments:** A folder for experiments
-* **Models:** A folder containing trained models or model predictions
-* **Reports:** Generated HTML, PDF etc. of your report
-* **src:** Project source code
-* README: This file!
-* .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
+### Data Saving
+- The processed dataset is saved in the `data/processed` directory for further analysis.
 
 ---
 
-## Schedule
+## Exploratory Analysis
 
-### Part 1 Schedule
-
-|Day 1|Day 2|Day 3|Day 4|Day 5|
-|-----|-----|-----|-----|-----|
-|Live Learning + Work Period | Work Period | Case Study + Work Period|Work Period|Work Period|
-
-### Part 2 Schedule
-
-|Day 6|Day 7|Day 8|Day 9|Day 10|
-|-----|-----|-----|-----|-----|
-|Review + Work Period | Work Period | Case Study + Work Period | Work Period | Presentation + Video Submission|
+### Pairwise Relationships
+A pairplot was used to visualize relationships among the variables. Key observations:
+- **Positive correlations** between:
+  - `TIME` and `TOTAL_SPEND` (indicating increasing spending over time).
+  - `PC_GDP` and `TOTAL_SPEND` (countries with higher GDP allocation to health tend to spend more).
+- **Weak correlation** between `PC_HEALTHXP` and `USD_CAP`.
 
 ---
 
-## Resources
+## Scatterplot Analyses
 
-### Git
+### 1. TIME vs. TOTAL_SPEND
+- **Observation**: A clear upward trend in `TOTAL_SPEND` over time, indicating global increases in pharmaceutical spending.
+- **Insights**:
+  - The linear regression model fits well for lower spending values but struggles with outliers at the higher end.
+  - Spending appears to grow non-linearly over time.
+- **Recommendations**:
+  - Use polynomial regression or log transformations to better capture non-linear growth patterns.
+- **Visualization**:  
 
-* [Interactive Git Tutorial](https://learngitbranching.js.org/)
-* [Interactive Rebase: Git In Practice - Part 2 - Thinktecture AG](https://www.thinktecture.com/en/tools/git-interactive-rebase/)
-* [Git merge conflicts | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts#:~:text=Understanding%20merge%20conflicts,automatically%20determine%20what%20is%20correct.)
+### TIME vs TOTAL_SPEND
+![Scatter Plot: TIME vs TOTAL SPEND](./reports/TIME%20vs.%20TOTAL_SPEND.png)
 
-### Working as a Team
 
-* [Five Rules of Engagement for Your High-Performing Team - High5 Leadership](https://high5leadership.com/five-rules-of-engagement-for-your-high-performing-team/)
-* [Ground Rules for Teams: Definition and Examples | Indeed.com](https://www.indeed.com/career-advice/career-development/ground-rules-for-teams)
-* [8 Ground Rules for Great Meetings (hbr.org)](https://hbr.org/2016/06/8-ground-rules-for-great-meetings)
-* [16 Ground Rules for Group Work | Facilitator School](https://www.facilitator.school/ground-rules/ground-rules-for-group-work)
-* [Chapter 8 Working in Teams | Research Software Engineering with Python (third-bit.com)](https://third-bit.com/py-rse/teams.html#teams-coc)
+---
 
-### Example Projects
+### 2. PC_HEALTHXP vs. USD_CAP
+- **Observation**: A weak positive correlation exists between the percentage of health spending and per capita spending.
+- **Insights**:
+  - Higher `PC_HEALTHXP` values slightly increase `USD_CAP`, but the variance is large.
+  - Other factors likely influence per capita spending significantly.
+- **Recommendations**:
+  - Group countries by income or healthcare system type to explore stronger relationships.
+  - Perform feature engineering to introduce new explanatory variables.
+- **Visualization**:
+- 
+### PC_HEALTHXP vs USD_CAP
+![Scatter Plot: PC_HEALTHXP vs USD_CAP](./reports/PC_HEALTHXP%20vs.%20USD_CAP.png)
 
-* [TTC Transit Delay Project](https://github.com/JasonYao3/TTC_transit_delay_proj)
-* [Mortgage Risk Assessment Project](https://github.com/movcha/team_project)
-* [Mexican Government Report Text Analysis](https://github.com/PhantomInsights/mexican-government-report)
+---
 
+### 3. PC_GDP vs. TOTAL_SPEND
+- **Observation**: A positive correlation is evident, with higher GDP allocation to health linked to increased pharmaceutical spending.
+- **Insights**:
+  - Outliers with extremely high `TOTAL_SPEND` values skew the linear regression line.
+- **Recommendations**:
+  - Investigate outliers to identify specific countries driving this trend.
+  - Consider normalizing `TOTAL_SPEND` by population to improve comparability.
+- **Visualization**:  
+### PC_GDP vs TOTAL_SPEND
+![Scatter Plot: PC_GDP vs TOTAL SPEND](./reports/PC_GDP%20vs.%20TOTAL_SPEND.png)
+
+
+---
+
+### 4. Pairplot Summary
+- **Trends**:
+  - Strong correlations between `TIME` and `TOTAL_SPEND`.
+  - Moderate correlation between `PC_GDP` and `TOTAL_SPEND`.
+- **Outliers**:
+  - Significant outliers in `TOTAL_SPEND` and `USD_CAP` influence trends.
+  - Removing outliers helps reveal clearer relationships.
+### Pairplot Summary
+![Pairplot Summary](./reports/Pairplot%20Summary.png)
+
+
+# Additional Project Questions and Answers
+
+## 1. What are the key variables and attributes in your dataset?
+The dataset contains the following key variables:
+- **LOCATION**: Country code identifying the region.
+- **TIME**: Year of the data.
+- **PC_HEALTHXP**: Percent of health expenditure.
+- **PC_GDP**: Percent of GDP allocated to pharmaceutical spending.
+- **USD_CAP**: Pharmaceutical spending per capita in US dollars.
+- **TOTAL_SPEND**: Total pharmaceutical spending in the respective country.
+- **FLAG_CODES**: Metadata flags for additional information.
+
+---
+
+## 2. How can we explore the relationships between different variables?
+We can explore relationships using:
+- **Scatterplots**: To identify correlations (e.g., `TIME` vs. `TOTAL_SPEND`, `PC_GDP` vs. `TOTAL_SPEND`).
+- **Pairwise Plots**: To visualize all possible variable pairings for correlations.
+- **Correlation Matrix**: To numerically quantify relationships between variables.
+- **Regression Analysis**: To identify and model linear or non-linear trends.
+
+---
+
+## 3. Are there any patterns or trends in the data that we can identify?
+Yes, the following trends and patterns were observed:
+- Pharmaceutical spending (`TOTAL_SPEND`) has increased significantly over time (`TIME`).
+- Countries with higher GDP allocation to health (`PC_GDP`) tend to have higher total pharmaceutical spending.
+- Weak correlation between `PC_HEALTHXP` and per capita spending (`USD_CAP`), suggesting other factors are at play.
+
+---
+
+## 4. Who is the intended audience for our data analysis?
+The analysis is intended for:
+- **Policymakers**: To understand global trends in pharmaceutical spending and allocate resources effectively.
+- **Healthcare Economists**: To analyze spending patterns and identify potential inefficiencies.
+- **Researchers**: To explore socioeconomic factors influencing healthcare spending.
+
+---
+
+## 5. What is the question our analysis is trying to answer?
+The analysis aims to answer:
+- How has pharmaceutical spending evolved globally over time?
+- What factors influence total pharmaceutical spending, and how significant are their effects?
+- Are there patterns or anomalies in spending across countries that warrant further investigation?
+
+---
+
+## 6. Are there any specific libraries or frameworks that are well-suited to our project requirements?
+Yes, we used:
+- **Pandas**: For data preprocessing and manipulation.
+- **NumPy**: For numerical computations.
+- **Matplotlib and Seaborn**: For data visualization.
+- **Scikit-learn**: For regression modeling and machine learning.
+- **Statsmodels**: For statistical analysis and time-series decomposition.
+
+---
+
+## 7. How can we iterate on our design to address feedback and make iterative improvements?
+- **Solicit feedback** from stakeholders and adjust visualizations or analysis based on their needs.
+- Incorporate **interactivity** in visualizations using tools like Plotly or Tableau.
+- **Refine models** based on validation metrics and feedback from domain experts.
+- Use **user testing** to ensure insights are intuitive and actionable.
+
+---
+
+## 8. What best practices can we follow to promote inclusivity and diversity in our visualization design?
+- Use **color-blind-friendly palettes**.
+- Provide **text-based alternatives** for visualizations (e.g., descriptive captions).
+- Avoid **biased terminology** or conclusions.
+- Ensure visualizations are **accessible** (e.g., readable font sizes, tooltips for interactivity).
+
+---
+
+## 9. How can we ensure that our visualization accurately represents the underlying data without misleading or misinterpreting information?
+- Use **appropriate scales** (e.g., logarithmic for large value ranges).
+- Avoid **distorted axes** that exaggerate trends.
+- Include **error bars** or uncertainty intervals in visualizations.
+- Clearly label visualizations and describe assumptions in captions.
+
+---
+
+## 10. Are there any privacy concerns or sensitive information that need to be addressed in our visualization?
+- The dataset does not contain personally identifiable information (PII); however:
+  - Ensure that country-level data is anonymized if required by specific stakeholders.
+  - Confirm compliance with GDPR or other data privacy laws for regional analysis.
+
+---
+
+## 11. What are the specific objectives and success criteria for our machine learning model?
+- **Objective**: Predict total pharmaceutical spending (`TOTAL_SPEND`) based on socioeconomic indicators.
+- **Success Criteria**:
+  - Achieve high accuracy (low RMSE, high R²).
+  - Identify key predictors influencing spending trends.
+
+---
+
+## 12. How can we select the most relevant features for training our machine learning model?
+- Use **correlation analysis** to identify strong predictors.
+- Apply **feature importance techniques** (e.g., using Random Forest or Gradient Boosting).
+- Conduct **recursive feature elimination (RFE)** to systematically remove irrelevant features.
+
+---
+
+## 13. Are there any missing values or outliers that need to be addressed through preprocessing?
+Yes:
+- **Missing Values**:
+  - The `FLAG_CODES` column had missing values, which were replaced with "Unknown".
+- **Outliers**:
+  - Significant outliers in `TOTAL_SPEND` were identified and removed using Z-scores to improve model accuracy.
+
+---
+
+## 14. Which machine learning algorithms are suitable for our problem domain?
+- **Linear Regression**: For understanding linear trends.
+- **Polynomial Regression**: To capture non-linear relationships.
+- **Random Forest or Gradient Boosting**: For robust feature importance analysis and prediction.
+- **Time-Series Models**: For forecasting trends over time.
+
+---
+
+## 15. What techniques can we use to validate and tune the hyperparameters for our models?
+- Use **cross-validation** to evaluate model performance.
+- Apply **grid search** or **random search** for hyperparameter tuning.
+- Track metrics like RMSE, R², and MAE for different model configurations.
+
+---
+
+## 16. How should we split the dataset into training, validation, and test sets?
+- **Training Set**: 70% of the dataset for model training.
+- **Validation Set**: 15% for hyperparameter tuning.
+- **Test Set**: 15% for evaluating final model performance.
+
+---
+
+## 17. Are there any ethical implications or biases associated with our machine learning model?
+- Country-level data may reflect biases related to socioeconomic conditions or reporting accuracy.
+- Ensure that the model does not perpetuate inequalities (e.g., overestimating spending for wealthier countries while underestimating for developing ones).
+
+---
+
+## 18. How can we document our machine learning pipeline and model architecture for future reference?
+- Use **Jupyter Notebooks** or **Markdown documents** to document:
+  - Preprocessing steps.
+  - Feature engineering.
+  - Model architecture.
+  - Evaluation metrics.
+- Save models and pipelines using **joblib** or **pickle** for reproducibility.
 
