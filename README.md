@@ -1,5 +1,9 @@
 # Team Project
 
+# Project overview video:
+
+https://drive.google.com/drive/folders/15v_m8gkb1I9S4zbHdgMoqfI0D_cgw-Pf?usp=drive_link
+
 ## Description
 
 In your assigned team of 4-5, you will collaboratively create a program to analyze data from an open-sourced dataset. 
