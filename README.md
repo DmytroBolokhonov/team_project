@@ -1,11 +1,14 @@
 # Team Project
+# Pharmaceutical Spending Analysis
+Collabarators:
+Ronak Patel
+Dmytro Bolokhonov
 
 # Project overview video:
 
 Ronak Patel Video https://drive.google.com/drive/folders/15v_m8gkb1I9S4zbHdgMoqfI0D_cgw-Pf?usp=drive_link
 
 
-# Pharmaceutical Spending Analysis
 
 ## Project Overview
 
@@ -117,7 +120,81 @@ A pairplot was used to visualize relationships among the variables. Key observat
 ### Pairplot Summary
 ![Pairplot Summary](./reports/Pairplot%20Summary.png)
 
+## Advanced Model Results: Pharmaceutical Spending Prediction
 
+The model developed for predicting pharmaceutical spending has undergone several stages of preparation, including data preprocessing, model training, and evaluation.
+
+### Key Steps Taken:
+
+- **Data Preprocessing**:  
+  - The dataset was cleaned, missing values were imputed, and categorical variables were encoded using one-hot encoding.  
+  - Features related to the country code, time, health expenditure, and GDP were used for prediction.
+
+- **Model Selection**:  
+  The following models were tested:
+  - **Ridge Regression**
+  - **Random Forest Regressor**
+
+- **Best Model**:  
+  **Random Forest Regressor** performed the best in terms of minimizing Mean Squared Error (MSE) compared to Ridge Regression.
+
+### Performance Evaluation:
+
+- **Ridge Regression MSE**: 48,680,961  
+- **Random Forest MSE**: 7,032,957  
+
+Given the significantly lower MSE for **Random Forest**, this model was selected as the best performer.
+
+### Feature Importance Analysis:
+
+- **Key Drivers of Pharmaceutical Spending**:  
+  The Random Forest model identified the following important features:
+  - **USA** was the most significant driver, with the highest impact on pharmaceutical spending.
+  - **PC_GDP** (GDP per capita) also had a considerable impact on spending.
+  - Other key countries like **JPN** (Japan), **DEU** (Germany), and **ITA** (Italy) were also highly influential.
+
+The final model was saved and is available for future use.
+
+---
+
+## SHAP Analysis:
+
+- **Individual Predictions**:  
+  SHAP (Shapley Additive Explanations) was used to explain individual predictions. For instance, the model’s predictions for **USA** were influenced by the country’s higher GDP and overall spending habits. This was further validated by a **SHAP force plot**, which indicated that **USA** had a significant positive effect on the prediction for pharmaceutical spending, as expected due to its high GDP.
+
+- **Global Explanation**:  
+  The **SHAP summary plot** demonstrated the global feature importance, confirming the dominance of country-related features in driving the predictions. The **USA**, along with **JPN** and **DEU**, were consistently among the most important features, underlining the model's reliance on country-specific factors.
+
+  - **Most Important Features**:
+    - **USA** (strongest driver)
+    - **GDP-related variables** (impacting overall pharmaceutical expenditure)
+    - **Time** (reflecting the trends in spending over years)
+
+  The **SHAP waterfall plot** for individual observations revealed how each feature contributed to the predicted pharmaceutical spending for different countries, offering insights into country-specific behaviors.
+
+- **[SHAP Summary Plot - Top Drivers of Pharmaceutical Spending](https://github.dev/DmytroBolokhonov/team_project/blob/team_project/reports/Top%20Drivers%20of%20Pharmaceutical%20Spending-%20Country%20and%20Spending-Related%20Features.png)**
+
+---
+
+### Conclusion:
+This model provides useful insights into how certain countries and spending-related factors (such as GDP and time) influence pharmaceutical expenditures. The insights derived from SHAP help stakeholders better understand the driving factors behind pharmaceutical spending, aiding policy and budgeting decisions.
+
+#### **Ronak Patel**
+
+- **Linear Regression Analysis**:
+  - **Method 1: TIME (Year) and TOTAL_SPEND**: Ronak analyzed how pharmaceutical spending has changed over time using linear regression. This method helped identify trends and provided insights into how spending increased or decreased with respect to time.
+  - **Method 2: PC_HEALTHXP (Percent of health spending) and USD_CAP (Spending per capita)**: Ronak examined the relationship between the percentage of health spending and the amount spent per person. This analysis revealed how changes in the health expenditure ratio affected individual spending on pharmaceuticals.
+  - **Method 3: PC_GDP (Percent of GDP) and TOTAL_SPEND**: Ronak explored the correlation between pharmaceutical spending and the share of GDP allocated to health. This analysis illustrated how national wealth allocation influenced overall pharmaceutical spending.
+  - **Outlier Detection**: Ronak identified and analyzed any outliers in the dataset, ensuring that extreme values did not skew the analysis and that the results were accurate.
+
+#### **Dmytro Bolokhonov**
+
+- **Data Preprocessing, Exploration, and Advanced Modeling**:
+  - **Data Loading & Cleaning**: Dmytro was responsible for loading the dataset, cleaning the data, and ensuring its quality. This included handling missing values, encoding categorical variables, and converting data types for consistency.
+  - **Exploratory Data Analysis**: Dmytro explored the relationships between the variables, identified patterns, and used visualizations to understand the data better. This step also included statistical summaries and missing value analysis.
+  - **Advanced Model**: Dmytro implemented the advanced machine learning model, specifically the Random Forest Regressor, to predict pharmaceutical spending. The model was trained and evaluated using cross-validation, and it outperformed other models in terms of Mean Squared Error (MSE).
+  - **SHAP Analysis**: Dmytro used SHAP (Shapley Additive Explanations) to explain individual and global model predictions, providing insights into the most important features driving pharmaceutical spending.
+  - 
 # Additional Project Questions and Answers
 
 ## 1. What are the key variables and attributes in your dataset?
