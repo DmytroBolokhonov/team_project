@@ -181,6 +181,8 @@ The final model was saved and is available for future use.
 ### Conclusion:
 This model provides useful insights into how certain countries and spending-related factors (such as GDP and time) influence pharmaceutical expenditures. The insights derived from SHAP help stakeholders better understand the driving factors behind pharmaceutical spending, aiding policy and budgeting decisions.
 
+
+### Collaboration and Contributions
 #### **Ronak Patel**
 
 - **Linear Regression Analysis**:
