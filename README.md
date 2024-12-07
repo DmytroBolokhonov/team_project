@@ -1,7 +1,9 @@
 # Team Project
 # Pharmaceutical Spending Analysis
 Collabarators:
+
 Ronak Patel
+
 Dmytro Bolokhonov
 
 # Project overview video:
